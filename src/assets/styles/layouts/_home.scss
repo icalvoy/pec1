@@ -1,0 +1,293 @@
+body {
+  background-color: $cv-bg;
+  color: $cv-corporate;
+  font-family: $font-family-serif;
+  margin: 0;
+  text-align: center;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+header {
+  background-color: $cv-bg-header-footer;
+  color: $cv-text-header-footer;
+  margin: 0;
+  width: 100%;
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  padding: 10px 50px;
+  text-align: right;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover { 
+        text-decoration: underline; 
+      }
+
+    }
+
+  }
+
+}
+
+.menu__item {
+  padding: 10px;
+}
+
+.menu__item a:hover::after {
+  color: #ccc;
+}
+
+.nav li a {
+  display: block;
+  padding: 15px 5px;
+}
+
+.menu__toggle {
+  font-size: 20px;
+  order: 1;
+}
+
+.menu__item {
+  display: none;
+  order: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.active .menu__item {
+  display: block;
+}
+
+@media all and (min-width: 767px) {
+  .menu__item {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #CONTENIDO PRINCIPAL
+\*------------------------------------*/
+
+main {
+  margin-top: 90px;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 30px;
+}
+
+section {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 30px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION-PERSONAL
+\*------------------------------------*/
+
+.personal h1 {
+  line-height: 0px;
+  margin-bottom: 0;
+}
+
+.personal__informacion {
+  @include flex;
+}
+
+.personal__informacion > div {
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to right, #f3f3f3, #f1f1f1);
+  margin: 10px;
+  text-align: center;
+  @include media(xs) {
+    width: 90%;
+  }
+  @include media(sm) {
+    width: 90%;
+  }
+  @include media(md) {
+    width: 33%;
+  }
+  @include media(lg) {
+    width: 33%;
+  }
+}
+
+.personal__intro {
+  padding: 0 20px;
+}
+
+.personal__intro p {
+  line-height: 26px;
+  margin: 50px 20px;
+}
+
+.personal__titulo {
+  background-color: $cv-bg-section;
+  color: #fff;
+  padding: 20px 0;
+
+  h3 {
+    margin: 0;
+  }
+
+}
+
+.personal__texto {
+  padding: 0 10px;
+  text-align: left;
+}
+
+
+
+
+/*------------------------------------*\
+  #SECTION-EXPERIENCIA
+\*------------------------------------*/
+
+.experiencia {
+  @include flex;
+}
+
+.experiencia {
+  margin: 40px 0;
+  text-align: left; 
+}
+
+.experiencia p {
+  margin: 0;
+}
+
+.experiencia__fechas {
+  @include flex-fecha;
+}
+
+.experiencia__datos {
+  @include flex-datos;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION-FORMACION
+\*------------------------------------*/
+
+.formacion {
+  @include flex;
+}
+
+.formacion {
+  margin: 40px 0;
+  text-align: left;
+}
+
+.formacion p {
+  margin: 0;
+}
+
+.formacion__fechas {
+  @include flex-fecha;
+}
+
+.formacion__datos {
+  @include flex-datos;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION-HABILIDADES
+\*------------------------------------*/
+
+.habilidades__intro p {
+  margin: 0;
+  text-align: left; 
+}
+
+.habilidades__barras {
+  @include flex;
+}
+
+.habilidades__barras {
+  margin: 40px 0;
+  text-align: left;
+}
+
+.habilidades__porcentaje {
+  @include media(xs) {
+    width: 90%;
+  }
+  @include media(sm) {
+    width: 90%;
+  }
+  @include media(md) {
+    width: 50%;
+  }
+  @include media(lg) {
+    width: 50%;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  #SECTION-FOOTER
+\*------------------------------------*/
+
+footer {
+  background-color: $cv-bg-header-footer;
+  color: $cv-text-header-footer;
+  margin-top: 30px;
+
+  p {
+    margin: 0;
+    padding: 30px 0;
+  }
+
+}
