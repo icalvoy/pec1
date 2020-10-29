@@ -1,3 +1,21 @@
+/**
+ * CONTENTS
+ *
+ * BASE
+ * Común..................Estilo H1, hr, progress.
+ *
+ * COMPONENTS
+ * Header.................Sección header.
+ * Personal...............Sección personal.
+ * Experiencia............Sección experiencia.
+ * Formación..............Sección formación.
+ * Habilidades............Sección habilidades.
+ * Footer.................Sección footer.
+ */
+
+
+
+
 body {
   background-color: $cv-bg;
   color: $cv-corporate;
@@ -5,6 +23,41 @@ body {
   margin: 0;
   text-align: center;
 }
+
+
+h1 {
+  font-size: 34px;
+}
+
+
+.hr-text {
+  border: 0;
+  color: #000;
+  height: 1.5em;
+  line-height: 1em;
+  opacity: 0.5;
+  outline: 0;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+
+}
+
+
+progress {     
+  -webkit-appearance: none;     
+  height: 10px;     
+  width: 280px;     
+} 
 
 
 
@@ -49,17 +102,17 @@ nav {
 
 }
 
+.nav li a {
+  display: block;
+  padding: 15px 5px;
+}
+
 .menu__item {
   padding: 10px;
 }
 
 .menu__item a:hover::after {
   color: #ccc;
-}
-
-.nav li a {
-  display: block;
-  padding: 15px 5px;
 }
 
 .menu__toggle {
@@ -77,6 +130,7 @@ nav {
 .active .menu__item {
   display: block;
 }
+
 
 @media all and (min-width: 767px) {
   .menu__item {
@@ -102,20 +156,18 @@ main {
   margin-top: 90px;
 }
 
+
 .content {
   margin: 0 auto;
   max-width: 1024px;
   padding: 0 30px;
 }
 
+
 section {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin-top: 30px;
   padding: 20px;
-}
-
-h1 {
-  font-size: 34px;
 }
 
 
@@ -140,12 +192,7 @@ h1 {
   background-image: linear-gradient(to right, #f3f3f3, #f1f1f1);
   margin: 10px;
   text-align: center;
-  @include media(xs) {
-    width: 90%;
-  }
-  @include media(sm) {
-    width: 90%;
-  }
+  width: 90%;
   @include media(md) {
     width: 33%;
   }
@@ -191,7 +238,7 @@ h1 {
 }
 
 .experiencia {
-  margin: 40px 0;
+  margin: 30px 0;
   text-align: left; 
 }
 
@@ -259,12 +306,7 @@ h1 {
 }
 
 .habilidades__porcentaje {
-  @include media(xs) {
-    width: 90%;
-  }
-  @include media(sm) {
-    width: 90%;
-  }
+  width: 90%;
   @include media(md) {
     width: 50%;
   }
@@ -272,6 +314,7 @@ h1 {
     width: 50%;
   }
 }
+
 
 
 

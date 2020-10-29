@@ -40,7 +40,6 @@
         "stylelint-config-sass-guidelines": "^7.1.0"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.1",
-        "pageable": "^0.6.8"
+        "@fortawesome/fontawesome-free": "^5.15.1"
     }
 }
