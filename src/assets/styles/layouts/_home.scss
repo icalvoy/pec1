@@ -54,9 +54,9 @@ h1 {
 
 
 progress {     
-  -webkit-appearance: none;     
-  height: 10px;     
-  width: 280px;     
+  appearance: none;
+  height: 10px;
+  width: 280px;  
 } 
 
 
@@ -212,7 +212,7 @@ section {
 
 .personal__titulo {
   background-color: $cv-bg-section;
-  color: #fff;
+  color: $cv-title-block;
   padding: 20px 0;
 
   h3 {
@@ -305,7 +305,7 @@ section {
   text-align: left;
 }
 
-.habilidades__porcentaje {
+.habilidades-porcentaje {
   width: 90%;
   @include media(md) {
     width: 50%;

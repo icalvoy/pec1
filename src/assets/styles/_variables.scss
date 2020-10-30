@@ -8,6 +8,7 @@ $cv-corporate: #333;
 $cv-bg-section: #667f93;
 $cv-bg-header-footer: #667f93;
 $cv-text-header-footer: #fff;
+$cv-title-block: #fff;
 
 $breakpoint-xs: 360px;
 $breakpoint-sm: 767px;
@@ -44,12 +45,7 @@ $breakpoint-lg: 1360px;
 }
 
 @mixin flex-fecha {
-  @include media(xs) {
-    width: 90%;
-  }      
-  @include media(sm) {
-    width: 90%;
-  }
+  width: 90%;
   @include media(md) {
     width: 25%;
   }
@@ -59,12 +55,7 @@ $breakpoint-lg: 1360px;
 }
 
 @mixin flex-datos {
-  @include media(xs) {
-    width: 90%;
-  }
-  @include media(sm) {
-    width: 90%;
-  }
+  width: 90%;
   @include media(md) {
     width: 75%;
   }
